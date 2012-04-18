@@ -15,12 +15,12 @@ void setup() {
   // 3 = Serial2
   // 4 = Serial3
 
-  // Direct serial logging to Serial1 at 9600 baud
-  Debug.begin(2,9600);
+  // Direct serial logging to Serial1 at 115200 baud
+  Debug.begin(2,115200);
 
-  Debug.log("Dbg Library initialized: %lu", millis());
+  Debug.log(LEVELDEBUG,"Dbg Library initialized: %lu", millis());
 
-  Debug.log("This is the normal syntax");
+  Debug.log(LEVELDEBUG,"This is the normal syntax");
   dbg("This is the preferred shorthand syntax");
 }
 

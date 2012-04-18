@@ -4,10 +4,10 @@
 
 #define DBG_MAX_LENGTH	80
 
-Dbg::Dbg() {
-}
+//Dbg::Dbg() {
+//}
 
-void Dbg::begin(int serial, int rate )
+void Dbg::begin(int serial, long int rate, byte maxlevel)
 {
 	switch(serial) {
 		case 1:
@@ -28,23 +28,43 @@ void Dbg::begin(int serial, int rate )
 			m_serial = &Serial;
 			break;
 	}
-	
+
 	m_serial->begin(rate);
-	
+        debug_level = maxlevel;
+
 }
 
-void Dbg::log(const char *fmt, ...)
+void Dbg::log(byte level, const char *fmt, ...)
 {
-	char buf[DBG_MAX_LENGTH];
-	
-	va_list ap;
-    	va_start(ap, fmt);
+        if(debug_level >= level){
+          char buf[DBG_MAX_LENGTH];
 
-    	vsnprintf(buf, (DBG_MAX_LENGTH - 1), fmt, ap);
-    	va_end(ap);
-	m_serial->println(buf);
+          va_list ap;
+          va_start(ap, fmt);
+
+          vsnprintf(buf, (DBG_MAX_LENGTH - 1), fmt, ap);
+          va_end(ap);
+
+          switch(level){
+          case LEVELFATAL:
+            m_serial->print("@@@");
+            break;
+          case LEVELERROR:
+            m_serial->print("***");
+            break;
+          case LEVELWARN:
+            m_serial->print("???");
+            break;
+          case LEVELINFO:
+            m_serial->print("%%%");
+            break;
+          case LEVELDEBUG:
+            m_serial->print("&&&");
+            break;
+          }
+          m_serial->println(buf);
+        }
 }
-
 #endif
 
 Dbg Debug;

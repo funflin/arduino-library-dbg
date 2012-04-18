@@ -6,9 +6,9 @@ unsigned int counter = 0;
 void setup() {
   // Direct serial logging to Serial (standard serial port) at default 9600 baud
   Debug.begin();
-  Debug.log("Dbg Library initialized: %lu", millis());
+  Debug.log(LEVELDEBUG,"Dbg Library initialized: %lu", millis());
 
-  Debug.log("This is the normal syntax");
+  Debug.log(LEVELDEBUG,"This is the normal syntax");
   dbg("This is the preferred shorthand syntax that compiles out of existence when DEBUG_ENABLED is undefined");
 
   // Notice that the above dbg() call will be truncated to 79 characters!

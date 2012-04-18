@@ -6,8 +6,12 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-Dbg KEYWORD1
-dbg KEYWORD1
+Dbg	KEYWORD1
+dbg	KEYWORD1
+info	KEYWORD1
+warn	KEYWORD1
+error	KEYWORD1
+fatal	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -19,9 +23,14 @@ log	KEYWORD2
 #######################################
 # Instances (KEYWORD2)
 #######################################
-Debug KEYWORD2
+Debug	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
+LEVELFATAL	LITERAL1
+LEVELERROR	LITERAL1
+LEVELWARN	LITERAL1
+LEVELINFO	LITERAL1
+LEVELDEBUG	LITERAL1

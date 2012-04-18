@@ -1,5 +1,15 @@
 Dbg library for Arduino
 
+Version 1.1
+
+by Felipe Acebes
+
+contact: funflin@gmail.com
+
+See the online documentation here: http://github.com/funflin/arduino-library-dbg
+See examples/ directory for simple examples
+
+
 Version 1.0
 
 by Byron Guernsey
@@ -7,5 +17,4 @@ by Byron Guernsey
 contact: okachobi@gmail.com
 
 See the online documentation here: http://code.google.com/p/arduino-library-dbg/
-See examples/ directory for simple examples
 
