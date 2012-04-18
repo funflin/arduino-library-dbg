@@ -1,5 +1,5 @@
 #ifndef _DBG_H_
-#define _DBG_H
+#define _DBG_H_
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
 #else
@@ -47,7 +47,6 @@ public:
 		__attribute__((format(printf, 3, 4))) {};
 };
 
-#define dbg(fmt, ...)  ((void)0)
 #define dbg(fmt, ...)  ((void)0)
 #define info(fmt, ...) ((void)0)
 #define warn(fmt, ...) ((void)0)
