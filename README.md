@@ -28,9 +28,7 @@ See Dbg/examples/ directory for examples
     }
 
 ##License
-The GPL version 3, read it at [http://www.gnu.org/licenses/gpl.txt](http://www.gnu.org/licenses/gpl.txt)
-
-Previus are in [New BSD License](http://www.opensource.org/licenses/bsd-license.php)
+[New BSD License](http://www.opensource.org/licenses/bsd-license.php)
 
 ##Version 1.0
 By Byron Guernsey
